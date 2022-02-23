@@ -13,7 +13,7 @@ jobs:
       -
         name: execute_expr
         run: |
-          echo ${{ steps.checkout.outcome == 'success' }}
+          echo ${{ true }}
       -
         name: echo_hi
         if: ${{ steps.execute_expr.output }}
