@@ -12,8 +12,7 @@ jobs:
         uses: actions/checkout@v2
       -
         name: execute_expr
-        run: |
-          echo ${{ true }}
+        run: ${{ true }}
       -
         name: echo_hi
         if: ${{ steps.execute_expr.output }}
