@@ -14,3 +14,9 @@ jobs:
         name: execute_expr
         run: |
           echo ${{ steps.checkout.outcome == 'success' }}
+      -
+        name: echo_hi
+        if: ${{ steps.execute_expr.outcome }}
+        run: |
+          echo ${{ steps.execute_expr.outcome }}
+          echo "hello_world"
