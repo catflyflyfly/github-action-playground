@@ -16,7 +16,8 @@ jobs:
           echo ${{ steps.checkout.outcome == 'success' }}
       -
         name: echo_hi
-        if: ${{ steps.execute_expr.outcome }}
+        if: ${{ steps.execute_expr.output }}
         run: |
+          echo ${{ steps.execute_expr.output }}
           echo ${{ steps.execute_expr.outcome }}
           echo "hello_world"
