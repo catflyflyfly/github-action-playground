@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       is_echo_hi: ${{ true }}
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
   test-expr:
     runs-on: ubuntu-latest
