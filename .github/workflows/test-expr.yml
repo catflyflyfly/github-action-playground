@@ -12,7 +12,8 @@ jobs:
         uses: actions/checkout@v2
       -
         name: execute_expr
-        run: ${{ true }}
+        run: |
+          echo ${{ true }}
       -
         name: echo_outputs
         run: |
