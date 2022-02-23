@@ -1,0 +1,16 @@
+name: test-expr
+
+on:
+  push:
+
+jobs:
+  test-expr:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: checkout
+        uses: actions/checkout@v2
+      -
+        name: execute_expr
+        run: |
+          echo ${{ steps.checkout.outcome == 'success' }}
