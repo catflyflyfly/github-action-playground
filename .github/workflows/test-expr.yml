@@ -14,9 +14,12 @@ jobs:
         name: execute_expr
         run: ${{ true }}
       -
-        name: echo_hi
-        if: ${{ steps.execute_expr.output }}
+        name: echo_outputs
         run: |
           echo ${{ steps.execute_expr.output }}
           echo ${{ steps.execute_expr.outcome }}
+      -
+        name: echo_hi
+        if: ${{ steps.execute_expr.output }}
+        run: |
           echo "hello_world"
